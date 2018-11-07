@@ -22,7 +22,7 @@
 
 <p>
   <strong>Rating:</strong>
-  <%= @movie.rating %>
+  <%= @movie.rating %>/10
 </p>
 
 <p>
@@ -32,9 +32,8 @@
 
 <p>
   <strong>Director:</strong>
-  <%= @movie.director %>
+  <%= @movie.director.name %>
 </p>
 
-<a href="#">Add to my list</a> |
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
