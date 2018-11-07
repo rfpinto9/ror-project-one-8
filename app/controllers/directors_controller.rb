@@ -10,6 +10,7 @@ class DirectorsController < ApplicationController
   # GET /directors/1
   # GET /directors/1.json
   def show
+    @movies = Movie.where("director_id = #{params[:id]}")
   end
 
   # GET /directors/new
@@ -71,4 +72,8 @@ class DirectorsController < ApplicationController
     def director_params
       params.require(:director).permit(:name, :age, :oscars)
     end
+
+    # def movies_params
+    #   params.require(:movie).permit(:title, :description, :genre, :year, :rating, :age_rating, :director_id)
+    # end
 end

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Director:</strong>
-  <%= @movie.director.name %>
+  <%= link_to @movie.director.name, director_path(@movie.director) %>
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
