@@ -21,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Rating:</strong>
+  <strong>IMDB Rating:</strong>
   <%= @movie.rating %>/10
 </p>
 
@@ -35,5 +35,5 @@
   <%= link_to @movie.director.name, director_path(@movie.director) %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Edit', edit_movie_path(@movie), :class => 'btn btn-outline-primary' %> |
 <%= link_to 'Back', movies_path %>
