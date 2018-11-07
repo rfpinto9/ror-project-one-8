@@ -41,10 +41,11 @@
     <%= form.number_field :age_rating %>
   </div>
 
+
   <div class="field">
-    <%= form.label :director_id %>
-    <%= form.text_field :director_id %>
+    <%= form.collection_select :director, Director.all, :id, :name, prompt: "Select director" %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
