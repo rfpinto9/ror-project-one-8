@@ -3,32 +3,34 @@
 <div>
 <h1>Movies</h1>
 </div>
-<div>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @movies.each do |movie| %>
+<div class="indexmovie">
+  <div class="leftcol">
+    <table width="100%">
+      <thead>
         <tr>
-          <td><%= movie.title %></td>
-          <td><%= link_to 'Show', movie, :class => 'btn btn-link' %></td>
-          <% if current_user && current_user.admin %>
-            <td><%= link_to 'Edit', edit_movie_path(movie), :class => 'btn btn-link edit' %></td>
-            <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-link destroy' %></td>
-          <% end %>
+          <th>Title</th>
+          <th>IMDB Rating</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
-<div>
+      </thead>
 
-</div>
+      <tbody>
+        <% @movies.each do |movie| %>
+          <tr>
+            <td><%= movie.title %></td>
+            <td><%= movie.rating %>/10</td>
+            <td><%= link_to 'Show', movie, :class => 'btn btn-link' %></td>
+            <% if current_user && current_user.admin %>
+              <td><%= link_to 'Edit', edit_movie_path(movie), :class => 'btn btn-link edit' %></td>
+              <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-link destroy' %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="indexpicture">
+    <td ><img src="/movieindex.png" height="300px" width="450px"></td>
+  </div>
 </div>
 <br>
 
