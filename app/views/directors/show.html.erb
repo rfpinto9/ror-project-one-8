@@ -15,12 +15,14 @@
   <%= @director.oscars %>
 </p>
 
-<p>
-  <strong>List of movies</strong></p>
+
+<p><strong>List of movies</strong></p>
+<ul>
   <% @movies.each do |m| %>
-      <p><%= m.title %></p>
+      <li><%= link_to m.title, m, :class => 'hlink' %></li>
   <% end %>
-
-
-<%= link_to 'Edit', edit_director_path(@director) %> |
-<%= link_to 'Back', directors_path %>
+</ul>
+<br>
+<br>
+<%= link_to 'Edit', edit_director_path(@director), :class => 'btn btn-primary' %>
+<%= link_to 'Back', directors_path, :class => 'btn btn-success' %>

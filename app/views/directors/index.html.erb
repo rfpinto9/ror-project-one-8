@@ -14,10 +14,10 @@
     <% @directors.each do |director| %>
       <tr>
         <td><%= director.name %></td>
-        <td><%= link_to 'Show', director %></td>
+        <td><%= link_to 'Show', director, :class => 'btn btn-link' %></td>
         <% if current_user && current_user.admin %>
-          <td><%= link_to 'Edit', edit_director_path(director) %></td>
-          <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_director_path(director), :class => 'btn btn-link edit' %></td>
+          <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-link destroy' %></td>
         <% end %>
       </tr>
     <% end %>
@@ -27,5 +27,5 @@
 <br>
 
 <% if current_user && current_user.admin %> 
-  <%= link_to 'New Director', new_director_path %>
+  <%= link_to 'New Director', new_director_path, :class => 'btn btn-primary' %>
 <% end %>
