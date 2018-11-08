@@ -13,41 +13,41 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :class => 'form-control myform' %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, :class => 'form-control myform myformdescription' %>
   </div>
 
   <div class="field">
     <%= form.label :genre %>
-    <%= form.text_field :genre %>
+    <%= form.text_field :genre, :class => 'form-control myform' %>
   </div>
-
+  
   <div class="field">
     <%= form.label :year %>
-    <%= form.number_field :year %>
+    <%= form.number_field :year, :class => 'form-control myform' %>
   </div>
 
   <div class="field">
     <%= form.label "IMDB Rating" %>
-    <%= form.text_field :rating %>
+    <%= form.text_field :rating, :class => 'form-control myform' %>
   </div>
 
   <div class="field">
     <%= form.label :age_rating %>
-    <%= form.number_field :age_rating %>
+    <%= form.number_field :age_rating, :class => 'form-control myform' %>
   </div>
 
 
   <div class="field">
-    <%= form.collection_select :director_id, Director.all, :id, :name, prompt: "Select director" %>
+    <%= form.collection_select :director_id, Director.all, :id, :name, prompt: "Select director", :class => 'form-control' %>
   </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit({:class => 'btn btn-success'}) %>
   </div>
 <% end %>
