@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @director.age %>
+</p>
+
+<p>
+  <strong>Oscars:</strong>
+  <%= @director.oscars %>
+</p>
+
+
+<p><strong>List of movies</strong></p>
+<ul>
+  <% @movies.each do |m| %>
+      <li><%= link_to m.title, m, :class => 'hlink' %></li>
+  <% end %>
+</ul>
+<br>
+<br>
+<%= link_to 'Edit', edit_director_path(@director), :class => 'btn btn-primary' %>
+<%= link_to 'Back', directors_path, :class => 'btn btn-success' %>
