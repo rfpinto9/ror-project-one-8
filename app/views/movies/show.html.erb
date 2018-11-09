@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Title</strong>
   <%= @movie.title %>
 </p>
 
@@ -43,10 +43,10 @@
 <% @movie.comments.each do |comment| %>
   <div>
     <p><strong><%= comment.user.email.split("@").first %></strong></p>
-    <p><%= comment.body %>
+    <p class="comments"><%= comment.body %>
 
     <% if (current_user == comment.user) || current_user.admin %>
-        <%= link_to '[X]', [comment.movie, comment], method: :delete, data: { confirm: 'Are you sure'} %></p> 
+        <%= link_to '[X]', [comment.movie, comment], method: :delete, data: { confirm: 'Are you sure'}, :class => 'hlinkX' %></p> 
     <% end %>
   </div>
   <br>

@@ -16,7 +16,7 @@
 
  * {
      font-family: Arial, Helvetica, sans-serif;
-     /* border: 1px black solid; */
+     /* border: 1px red solid; */
  }
 
  body {
@@ -28,8 +28,9 @@
  }
 
  p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 0.7cm;
+    font-family: 'Times New Roman', Times, serif;
  }
 
  li {
@@ -40,6 +41,11 @@
      background-color: rgba(0,0,0,0);
      color: blue;
  }
+
+ .hlinkX:hover {
+    background-color: rgba(0,0,0,0);
+    color: red;
+}
 
  .navbar {
      color: red;
@@ -98,13 +104,14 @@
 }
 
 .navimargin {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;  
-    margin-left: 10px;
+    margin-bottom: 10px; 
     margin-top: -15px;
 }
 
 .logout {
     margin-right: 20px;
+}
+
+.comments {
+    font-size: 17px;
 }
