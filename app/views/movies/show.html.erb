@@ -42,7 +42,7 @@
 <h3>Comments</h3>
 <% @movie.comments.each do |comment| %>
   <div>
-    <p><strong><%= comment.user.email %></strong></p>
+    <p><strong><%= comment.user.email.split("@").first %></strong></p>
     <p><%= comment.body %>
 
     <% if (current_user == comment.user) || current_user.admin %>
@@ -58,10 +58,10 @@
         <%= c.hidden_field(:user_id, {:class => 'form-control', :value => current_user.id }) %>
     </p>
     <p>
-        <%= c.text_area(:body, {:class => 'form-control'}) %>
+        <%= c.text_area(:body, {:class => 'form-control myform myformdescription'}) %>
     </p>
 
     <p>
-        <%= c.submit({:class => 'btn btn-default'}) %>
+        <%= c.submit({:class => 'btn btn-success'}) %>
     </p>
 <% end %>

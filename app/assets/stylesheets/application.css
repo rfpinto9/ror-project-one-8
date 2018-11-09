@@ -23,6 +23,10 @@
      background-color: rgba(220,214,247,0.9);
  }
 
+ hr {
+     border-color: grey;
+ }
+
  p {
     font-size: 18px;
     line-height: 0.7cm;
@@ -81,8 +85,8 @@
 }
 
 .myformdescription {
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 800px;
 }
 
 .maincontainer {
@@ -94,7 +98,13 @@
 }
 
 .navimargin {
-  margin-bottom: 10px;  
-  margin-left: 10px;
-  margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;  
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+.logout {
+    margin-right: 20px;
 }
