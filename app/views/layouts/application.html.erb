@@ -12,16 +12,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <nav class="navbar navbar-default navbar-inverse">
-              <ul class="nav navbar-nav">
-                <li class="btn btn-secondary"><a href="/">Homepage</a></li>
-                <li class="btn btn-secondary"><a href="/movies">Movies</a></li>
-                <li class="btn btn-secondary"><a href="/directors">Directors</a></li>
-              </ul>
-          </nav>
-        </div>
-        <div class="col-md-12">
+      <div class="col-md-12 navimargin">
           <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link hlink' %> |
@@ -32,7 +23,15 @@
           <% end %>
         </div>
         <div class="col-md-12">
-        <hr>
+          <nav class="navbar navbar-default navbar-inverse">
+              <ul class="nav navbar-nav">
+                <li class="btn btn-secondary"><a href="/">Homepage</a></li>
+                <li class="btn btn-secondary"><a href="/movies">Movies</a></li>
+                <li class="btn btn-secondary"><a href="/directors">Directors</a></li>
+              </ul>
+          </nav>
+        </div>
+        <div class="col-md-12 maincontainer">
           <%= yield %>
         </div>
       </div>
