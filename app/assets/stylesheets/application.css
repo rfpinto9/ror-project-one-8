@@ -103,6 +103,10 @@
     background-color: rgba(122,121,120,0.1)
 }
 
+.centralise {
+    text-align: center;
+}
+
 .navimargin {
     margin-bottom: 10px;  
     margin-top: -15px;

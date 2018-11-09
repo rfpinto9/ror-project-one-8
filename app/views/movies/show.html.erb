@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<div class="centralise">
+  <img src="<%= @movie.picture %>" width="215" height="300">
+</div>
+<br>
+<br>
 <p>
-  <strong>Title</strong>
+  <strong>Title:</strong>
   <%= @movie.title %>
 </p>
 
@@ -38,6 +43,7 @@
 <br>
 <%= link_to 'Edit', edit_movie_path(@movie), :class => 'btn btn-primary' %>
 <%= link_to 'Back', movies_path, :class => 'btn btn-success' %>
+
 <hr>
 <h3>Comments</h3>
 <% @movie.comments.each do |comment| %>
@@ -48,7 +54,6 @@
     <% if (current_user == comment.user) || current_user.admin %>
         <%= link_to '[X]', [comment.movie, comment], method: :delete, data: { confirm: 'Are you sure'}, :class => 'hlinkX' %></p> 
     <% end %>
-  </div>
   <br>
 <% end %>
 <hr>
