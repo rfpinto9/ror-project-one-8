@@ -1,30 +1,17 @@
 # README
 
-Name:<br>
-What is does
-struggles
-sprint2
+<strong>Name: </strong><br>
+Movies library
+<strong>What is does? </strong><br>
+The application is a wikipedia of movie. The user can access the website by signing up/in and once inside the application they can navigate through a list of movies and directors.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The user have the option to see more information about one specific movie which includes a link to the director that produced the film, or they can see a specific director which will also link to the list of movies they have produced.
+<strong>struggles </strong><br>
 
-Things you may want to cover:
+<strong>sprint2 </strong><br>
+- Add a seach bar on the homepage
+- Show the username as login information instead of email
+- Add a Watched and To Watch list so the user can favourite films and directors
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ror-project-one-8
+<strong>How to access the application: </strong><br>
+https://murmuring-gorge-32741.herokuapp.com/users/sign_up
