@@ -16,16 +16,21 @@
 
  * {
      font-family: Arial, Helvetica, sans-serif;
-     /* border: 1px black solid; */
+     /* border: 1px red solid; */
  }
 
  body {
      background-color: rgba(220,214,247,0.9);
  }
 
+ hr {
+     border-color: grey;
+ }
+
  p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 0.7cm;
+    font-family: 'Times New Roman', Times, serif;
  }
 
  li {
@@ -36,6 +41,11 @@
      background-color: rgba(0,0,0,0);
      color: blue;
  }
+
+ .hlinkX:hover {
+    background-color: rgba(0,0,0,0);
+    color: red;
+}
 
  .navbar {
      color: red;
@@ -81,8 +91,8 @@
 }
 
 .myformdescription {
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 800px;
 }
 
 .maincontainer {
@@ -94,7 +104,14 @@
 }
 
 .navimargin {
-  margin-bottom: 10px;  
-  margin-left: 10px;
-  margin-top: -15px;
+    margin-bottom: 10px; 
+    margin-top: -15px;
+}
+
+.logout {
+    margin-right: 20px;
+}
+
+.comments {
+    font-size: 17px;
 }
