@@ -46,6 +46,10 @@
     <%= form.number_field :age_rating, :class => 'form-control myform' %>
   </div>
 
+  <div class="field">
+    <%= form.label :trailer %>
+    <%= form.text_field :trailer, :class => 'form-control myform' %>
+  </div>
 
   <div class="field">
     <%= form.collection_select :director_id, Director.all, :id, :name, prompt: "Select director", :class => 'form-control' %>

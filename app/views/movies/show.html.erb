@@ -39,6 +39,12 @@
   <strong>Director:</strong>
   <%= link_to @movie.director.name, director_path(@movie.director), :class => 'hlink' %>
 </p>
+
+<div>
+  <p><strong>Trailer:</strong></p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @movie.trailer %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <br>
 <br>
 <%= link_to 'Edit', edit_movie_path(@movie), :class => 'btn btn-primary' %>
