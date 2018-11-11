@@ -1,5 +1,7 @@
 class Movie < ApplicationRecord
   belongs_to :director
   has_many :comments
-  validates :title, uniqueness: true
+  validates :title, uniqueness: true, presence: true
+
+
 end
