@@ -21,4 +21,5 @@ Deploying the project was also a big challenge, because I had never done it befo
 <strong>How to access the application: </strong><br>
 https://murmuring-gorge-32741.herokuapp.com/users/sign_up
 
-test
+<strong>Signup </strong><br>
+This is a practice project and will allow sign up with a fake email and any password for testing purposes
